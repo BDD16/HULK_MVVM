@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:vm="clr-namespace:HULK.ViewModels"
+                    xmlns:view="clr-namespace:HULK.Views">
+
+    <!-- add in views and view models below for rendering-->
+    <DataTemplate DataType="{x:Type vm:LoginScreenViewModel}">
+        <view:LoginScreen />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:HomeScreenViewModel}">
+        <view:HomeScreen />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:TabViewModel}">
+        <view:TabView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+        <view:SettingsView />
+    </DataTemplate>
+
+
+</ResourceDictionary>

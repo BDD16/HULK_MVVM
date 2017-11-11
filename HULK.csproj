@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01764AF6-CA56-4DB1-9A92-AE1B3FD73465}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HULK</RootNamespace>
+    <AssemblyName>HULK</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.PubSubEvents.1.0.0\lib\portable-sl4+wp7+windows8+net40\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=5.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.UnityExtensions.5.0.1\lib\NET45\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Model\BootStrapper.cs" />
+    <Compile Include="Model\DrBannerKeyGenerator.cs" />
+    <Compile Include="Model\HulkAuthentication.cs" />
+    <Compile Include="Model\Injector.cs" />
+    <Compile Include="Model\Messaging\HulkAsync.cs" />
+    <Compile Include="Model\Messaging\HulkPeer2Peer.cs" />
+    <Compile Include="Model\Messaging\P2P\ProfHulkCarrier.cs" />
+    <Compile Include="Model\PassPassword.cs" />
+    <Compile Include="ViewModels\HomeScreenViewModel.cs" />
+    <Compile Include="ViewModels\LoginScreenViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\TabViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginScreen.xaml.cs">
+      <DependentUpon>LoginScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartialViews\AddFriendView.xaml.cs">
+      <DependentUpon>AddFriendView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartialViews\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabView.xaml.cs">
+      <DependentUpon>TabView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\HomeScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PartialViews\AddFriendView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PartialViews\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Views\Images\GammaRadioactive.jpeg" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Model\Common\Apidrvr.h" />
+    <Content Include="Model\Common\BaseCom.cpp" />
+    <Content Include="Model\Common\BaseCom.h" />
+    <Content Include="Model\Common\BootEncryption.cpp" />
+    <Content Include="Model\Common\BootEncryption.h" />
+    <Content Include="Model\Common\Cache.c" />
+    <Content Include="Model\Common\Cache.h" />
+    <Content Include="Model\Common\Cmdline.c" />
+    <Content Include="Model\Common\Cmdline.h" />
+    <Content Include="Model\Common\Combo.c" />
+    <Content Include="Model\Common\Combo.h" />
+    <Content Include="Model\Common\Common.h" />
+    <Content Include="Model\Common\Common.rc" />
+    <Content Include="Model\Common\Crc.c" />
+    <Content Include="Model\Common\Crc.h" />
+    <Content Include="Model\Common\Crypto.c" />
+    <Content Include="Model\Common\Crypto.h" />
+    <Content Include="Model\Common\Dictionary.c" />
+    <Content Include="Model\Common\Dictionary.h" />
+    <Content Include="Model\Common\Dlgcode.c" />
+    <Content Include="Model\Common\Dlgcode.h" />
+    <Content Include="Model\Common\EncryptionThreadPool.c" />
+    <Content Include="Model\Common\EncryptionThreadPool.h" />
+    <Content Include="Model\Common\Endian.c" />
+    <Content Include="Model\Common\Endian.h" />
+    <Content Include="Model\Common\Exception.h" />
+    <Content Include="Model\Common\Fat.c" />
+    <Content Include="Model\Common\Fat.h" />
+    <Content Include="Model\Common\Format.c" />
+    <Content Include="Model\Common\Format.h" />
+    <Content Include="Model\Common\GfMul.c" />
+    <Content Include="Model\Common\GfMul.h" />
+    <Content Include="Model\Common\Inflate.c" />
+    <Content Include="Model\Common\Inflate.h" />
+    <Content Include="Model\Common\Keyfiles.c" />
+    <Content Include="Model\Common\Keyfiles.h" />
+    <Content Include="Model\Common\Language.c" />
+    <Content Include="Model\Common\Language.h" />
+    <Resource Include="Model\Common\Language.xml" />
+    <Content Include="Model\Common\libzip\compat.h" />
+    <Content Include="Model\Common\libzip\config.h" />
+    <Content Include="Model\Common\libzip\mkstemp.c" />
+    <Content Include="Model\Common\libzip\zip.h" />
+    <Content Include="Model\Common\libzip\zipconf.h" />
+    <Content Include="Model\Common\libzip\zipint.h" />
+    <Content Include="Model\Common\libzip\zipwin32.h" />
+    <Content Include="Model\Common\libzip\zip_add.c" />
+    <Content Include="Model\Common\libzip\zip_add_dir.c" />
+    <Content Include="Model\Common\libzip\zip_add_entry.c" />
+    <Content Include="Model\Common\libzip\zip_buffer.c" />
+    <Content Include="Model\Common\libzip\zip_close.c" />
+    <Content Include="Model\Common\libzip\zip_delete.c" />
+    <Content Include="Model\Common\libzip\zip_dirent.c" />
+    <Content Include="Model\Common\libzip\zip_dir_add.c" />
+    <Content Include="Model\Common\libzip\zip_discard.c" />
+    <Content Include="Model\Common\libzip\zip_entry.c" />
+    <Content Include="Model\Common\libzip\zip_error.c" />
+    <Content Include="Model\Common\libzip\zip_error_clear.c" />
+    <Content Include="Model\Common\libzip\zip_error_get.c" />
+    <Content Include="Model\Common\libzip\zip_error_get_sys_type.c" />
+    <Content Include="Model\Common\libzip\zip_error_strerror.c" />
+    <Content Include="Model\Common\libzip\zip_error_to_str.c" />
+    <Content Include="Model\Common\libzip\zip_err_str.c" />
+    <Content Include="Model\Common\libzip\zip_extra_field.c" />
+    <Content Include="Model\Common\libzip\zip_extra_field_api.c" />
+    <Content Include="Model\Common\libzip\zip_fclose.c" />
+    <Content Include="Model\Common\libzip\zip_fdopen.c" />
+    <Content Include="Model\Common\libzip\zip_filerange_crc.c" />
+    <Content Include="Model\Common\libzip\zip_file_add.c" />
+    <Content Include="Model\Common\libzip\zip_file_error_clear.c" />
+    <Content Include="Model\Common\libzip\zip_file_error_get.c" />
+    <Content Include="Model\Common\libzip\zip_file_get_comment.c" />
+    <Content Include="Model\Common\libzip\zip_file_get_external_attributes.c" />
+    <Content Include="Model\Common\libzip\zip_file_get_offset.c" />
+    <Content Include="Model\Common\libzip\zip_file_rename.c" />
+    <Content Include="Model\Common\libzip\zip_file_replace.c" />
+    <Content Include="Model\Common\libzip\zip_file_set_comment.c" />
+    <Content Include="Model\Common\libzip\zip_file_set_external_attributes.c" />
+    <Content Include="Model\Common\libzip\zip_file_set_mtime.c" />
+    <Content Include="Model\Common\libzip\zip_file_strerror.c" />
+    <Content Include="Model\Common\libzip\zip_fopen.c" />
+    <Content Include="Model\Common\libzip\zip_fopen_encrypted.c" />
+    <Content Include="Model\Common\libzip\zip_fopen_index.c" />
+    <Content Include="Model\Common\libzip\zip_fopen_index_encrypted.c" />
+    <Content Include="Model\Common\libzip\zip_fread.c" />
+    <Content Include="Model\Common\libzip\zip_get_archive_comment.c" />
+    <Content Include="Model\Common\libzip\zip_get_archive_flag.c" />
+    <Content Include="Model\Common\libzip\zip_get_compression_implementation.c" />
+    <Content Include="Model\Common\libzip\zip_get_encryption_implementation.c" />
+    <Content Include="Model\Common\libzip\zip_get_file_comment.c" />
+    <Content Include="Model\Common\libzip\zip_get_name.c" />
+    <Content Include="Model\Common\libzip\zip_get_num_entries.c" />
+    <Content Include="Model\Common\libzip\zip_get_num_files.c" />
+    <Content Include="Model\Common\libzip\zip_hash.c" />
+    <Content Include="Model\Common\libzip\zip_io_util.c" />
+    <Content Include="Model\Common\libzip\zip_memdup.c" />
+    <Content Include="Model\Common\libzip\zip_name_locate.c" />
+    <Content Include="Model\Common\libzip\zip_new.c" />
+    <Content Include="Model\Common\libzip\zip_open.c" />
+    <Content Include="Model\Common\libzip\zip_rename.c" />
+    <Content Include="Model\Common\libzip\zip_replace.c" />
+    <Content Include="Model\Common\libzip\zip_set_archive_comment.c" />
+    <Content Include="Model\Common\libzip\zip_set_archive_flag.c" />
+    <Content Include="Model\Common\libzip\zip_set_default_password.c" />
+    <Content Include="Model\Common\libzip\zip_set_file_comment.c" />
+    <Content Include="Model\Common\libzip\zip_set_file_compression.c" />
+    <Content Include="Model\Common\libzip\zip_set_name.c" />
+    <Content Include="Model\Common\libzip\zip_source_begin_write.c" />
+    <Content Include="Model\Common\libzip\zip_source_buffer.c" />
+    <Content Include="Model\Common\libzip\zip_source_call.c" />
+    <Content Include="Model\Common\libzip\zip_source_close.c" />
+    <Content Include="Model\Common\libzip\zip_source_commit_write.c" />
+    <Content Include="Model\Common\libzip\zip_source_crc.c" />
+    <Content Include="Model\Common\libzip\zip_source_deflate.c" />
+    <Content Include="Model\Common\libzip\zip_source_error.c" />
+    <Content Include="Model\Common\libzip\zip_source_file.c" />
+    <Content Include="Model\Common\libzip\zip_source_filep.c" />
+    <Content Include="Model\Common\libzip\zip_source_free.c" />
+    <Content Include="Model\Common\libzip\zip_source_function.c" />
+    <Content Include="Model\Common\libzip\zip_source_is_deleted.c" />
+    <Content Include="Model\Common\libzip\zip_source_layered.c" />
+    <Content Include="Model\Common\libzip\zip_source_open.c" />
+    <Content Include="Model\Common\libzip\zip_source_pkware.c" />
+    <Content Include="Model\Common\libzip\zip_source_read.c" />
+    <Content Include="Model\Common\libzip\zip_source_remove.c" />
+    <Content Include="Model\Common\libzip\zip_source_rollback_write.c" />
+    <Content Include="Model\Common\libzip\zip_source_seek.c" />
+    <Content Include="Model\Common\libzip\zip_source_seek_write.c" />
+    <Content Include="Model\Common\libzip\zip_source_stat.c" />
+    <Content Include="Model\Common\libzip\zip_source_supports.c" />
+    <Content Include="Model\Common\libzip\zip_source_tell.c" />
+    <Content Include="Model\Common\libzip\zip_source_tell_write.c" />
+    <Content Include="Model\Common\libzip\zip_source_win32a.c" />
+    <Content Include="Model\Common\libzip\zip_source_win32handle.c" />
+    <Content Include="Model\Common\libzip\zip_source_win32utf8.c" />
+    <Content Include="Model\Common\libzip\zip_source_win32w.c" />
+    <Content Include="Model\Common\libzip\zip_source_window.c" />
+    <Content Include="Model\Common\libzip\zip_source_write.c" />
+    <Content Include="Model\Common\libzip\zip_source_zip.c" />
+    <Content Include="Model\Common\libzip\zip_source_zip_new.c" />
+    <Content Include="Model\Common\libzip\zip_stat.c" />
+    <Content Include="Model\Common\libzip\zip_stat_index.c" />
+    <Content Include="Model\Common\libzip\zip_stat_init.c" />
+    <Content Include="Model\Common\libzip\zip_strerror.c" />
+    <Content Include="Model\Common\libzip\zip_string.c" />
+    <Content Include="Model\Common\libzip\zip_unchange.c" />
+    <Content Include="Model\Common\libzip\zip_unchange_all.c" />
+    <Content Include="Model\Common\libzip\zip_unchange_archive.c" />
+    <Content Include="Model\Common\libzip\zip_unchange_data.c" />
+    <Content Include="Model\Common\libzip\zip_utf-8.c" />
+    <Content Include="Model\Common\Password.c" />
+    <Content Include="Model\Common\Password.h" />
+    <Content Include="Model\Common\Pkcs5.c" />
+    <Content Include="Model\Common\Pkcs5.h" />
+    <Content Include="Model\Common\Progress.c" />
+    <Content Include="Model\Common\Progress.h" />
+    <Content Include="Model\Common\Random.c" />
+    <Content Include="Model\Common\Random.h" />
+    <Content Include="Model\Common\Registry.c" />
+    <Content Include="Model\Common\Registry.h" />
+    <Content Include="Model\Common\Resource.h" />
+    <Content Include="Model\Common\SecurityToken.cpp" />
+    <Content Include="Model\Common\SecurityToken.h" />
+    <Content Include="Model\Common\Tcdefs.h" />
+    <Content Include="Model\Common\Tests.c" />
+    <Content Include="Model\Common\Tests.h" />
+    <Resource Include="Model\Common\Textual_logo_288dpi.bmp" />
+    <Resource Include="Model\Common\Textual_logo_96dpi.bmp" />
+    <Resource Include="Model\Common\Textual_logo_background.bmp" />
+    <Resource Include="Model\Common\VeraCrypt.ico" />
+    <Resource Include="Model\Common\VeraCrypt_mounted.ico" />
+    <Resource Include="Model\Common\VeraCrypt_Volume.ico" />
+    <Content Include="Model\Common\Volumes.c" />
+    <Content Include="Model\Common\Volumes.h" />
+    <Content Include="Model\Common\Wipe.c" />
+    <Content Include="Model\Common\Wipe.h" />
+    <Content Include="Model\Common\Xml.c" />
+    <Content Include="Model\Common\Xml.h" />
+    <Content Include="Model\Common\Xts.c" />
+    <Content Include="Model\Common\Xts.h" />
+    <Content Include="Model\Common\zlib\adler32.c" />
+    <Content Include="Model\Common\zlib\compress.c" />
+    <Content Include="Model\Common\zlib\crc32.c" />
+    <Content Include="Model\Common\zlib\crc32.h" />
+    <Content Include="Model\Common\zlib\deflate.c" />
+    <Content Include="Model\Common\zlib\deflate.h" />
+    <Content Include="Model\Common\zlib\gzclose.c" />
+    <Content Include="Model\Common\zlib\gzguts.h" />
+    <Content Include="Model\Common\zlib\gzlib.c" />
+    <Content Include="Model\Common\zlib\gzread.c" />
+    <Content Include="Model\Common\zlib\gzwrite.c" />
+    <Content Include="Model\Common\zlib\infback.c" />
+    <Content Include="Model\Common\zlib\inffast.c" />
+    <Content Include="Model\Common\zlib\inffast.h" />
+    <Content Include="Model\Common\zlib\inffixed.h" />
+    <Content Include="Model\Common\zlib\inflate.c" />
+    <Content Include="Model\Common\zlib\inflate.h" />
+    <Content Include="Model\Common\zlib\inftrees.c" />
+    <Content Include="Model\Common\zlib\inftrees.h" />
+    <Content Include="Model\Common\zlib\trees.c" />
+    <Content Include="Model\Common\zlib\trees.h" />
+    <Content Include="Model\Common\zlib\uncompr.c" />
+    <Content Include="Model\Common\zlib\zconf.h" />
+    <Content Include="Model\Common\zlib\zlib.h" />
+    <Content Include="Model\Common\zlib\zutil.c" />
+    <Content Include="Model\Common\zlib\zutil.h" />
+    <Content Include="Model\Crypto\Crypto.vcproj" />
+    <Content Include="Model\Crypto\Crypto.vcxproj" />
+    <Content Include="Model\Crypto\Crypto.vcxproj.filters" />
+    <None Include="Model\Common\libzip\LICENSE" />
+    <None Include="Model\Common\libzip\NEWS.md" />
+    <None Include="Model\Common\Makefile" />
+    <None Include="Model\Common\Sources" />
+    <None Include="Model\Common\zlib\README" />
+    <None Include="Model\Crypto\Makefile" />
+    <None Include="Model\Crypto\Sources" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\Dagger.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\Crypto\Aes.h" />
+    <Content Include="Model\Crypto\Aescrypt.c" />
+    <Content Include="Model\Crypto\Aeskey.c" />
+    <Content Include="Model\Crypto\Aesopt.h" />
+    <Content Include="Model\Crypto\AesSmall.c" />
+    <Content Include="Model\Crypto\AesSmall.h" />
+    <Content Include="Model\Crypto\AesSmall_x86.asm" />
+    <Content Include="Model\Crypto\Aestab.c" />
+    <Content Include="Model\Crypto\Aestab.h" />
+    <Content Include="Model\Crypto\Aes_hw_cpu.asm" />
+    <Content Include="Model\Crypto\Aes_hw_cpu.h" />
+    <Content Include="Model\Crypto\Aes_x64.asm" />
+    <Content Include="Model\Crypto\Aes_x86.asm" />
+    <Content Include="Model\Crypto\Camellia.c" />
+    <Content Include="Model\Crypto\Camellia.h" />
+    <Content Include="Model\Crypto\CamelliaSmall.c" />
+    <Content Include="Model\Crypto\CamelliaSmall.h" />
+    <Content Include="Model\Crypto\config.h" />
+    <Content Include="Model\Crypto\cpu.c" />
+    <Content Include="Model\Crypto\cpu.h" />
+    <Content Include="Model\Crypto\Crypto.vcxproj.user" />
+    <Content Include="Model\Crypto\gost89_x64.asm" />
+    <Content Include="Model\Crypto\gost89_x86.asm" />
+    <Content Include="Model\Crypto\GostCipher.c" />
+    <Content Include="Model\Crypto\GostCipher.h" />
+    <Content Include="Model\Crypto\kuznyechik.c" />
+    <Content Include="Model\Crypto\kuznyechik.h" />
+    <Content Include="Model\Crypto\Makefile.inc" />
+    <Content Include="Model\Crypto\misc.h" />
+    <Content Include="Model\Crypto\Rmd160.c" />
+    <Content Include="Model\Crypto\Rmd160.h" />
+    <Content Include="Model\Crypto\Serpent.c" />
+    <Content Include="Model\Crypto\Serpent.h" />
+    <Content Include="Model\Crypto\SerpentFast.c" />
+    <Content Include="Model\Crypto\SerpentFast.h" />
+    <Content Include="Model\Crypto\SerpentFast_sbox.h" />
+    <Content Include="Model\Crypto\SerpentFast_simd.cpp" />
+    <Content Include="Model\Crypto\Sha2.c" />
+    <Content Include="Model\Crypto\Sha2.h" />
+    <Content Include="Model\Crypto\Sha2Small.c" />
+    <Content Include="Model\Crypto\Sha2Small.h" />
+    <Content Include="Model\Crypto\Streebog.c" />
+    <Content Include="Model\Crypto\Streebog.h" />
+    <Content Include="Model\Crypto\Twofish.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Model\Crypto\Twofish.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Model\Crypto\Twofish_x64.S" />
+    <Content Include="Model\Crypto\Twofish_x86.S" />
+    <Content Include="Model\Crypto\Whirlpool.c" />
+    <Content Include="Model\Crypto\Whirlpool.h" />
+    <Resource Include="Views\Images\Logo.ico" />
+    <Resource Include="Views\Images\Smash.png" />
+    <Resource Include="Views\Images\HULKbanner.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

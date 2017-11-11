@@ -1,0 +1,14 @@
+﻿<Window x:Class="HULK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="http://www.codeplex.com/CompositeWPF"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HULK"
+        mc:Ignorable="d"
+        Title="HULKEnigma" Height="525" Width="325
+        " ResizeMode="CanMinimize" Icon="Views/Images/Logo.ico">
+    <Grid>
+        
+    </Grid>
+</Window>
